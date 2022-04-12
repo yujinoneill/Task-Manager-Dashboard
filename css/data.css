@@ -1,0 +1,31 @@
+.card-body {
+    font-size: 14px;
+}
+
+.icon a {
+    text-decoration: none;
+}
+
+.icon p {
+    color: #274C77;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.color-stats {
+    font-size: 12px;
+}
+
+.share-people {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.share-people img {
+    width: 60px;
+}
