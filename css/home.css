@@ -38,13 +38,6 @@
     padding: 0;
 }
 
-.weekly-img {
-    width: 100%;
-}
-
-.weekly-img img {
-    width: 100%;
-}
 
 @media screen and (min-width: 576px) {
     .monthly-border {
