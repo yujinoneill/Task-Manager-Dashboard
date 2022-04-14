@@ -27,3 +27,7 @@
 .links a {
     text-decoration: none;
 }
+
+.links i {
+    font-size: 25px;
+}
