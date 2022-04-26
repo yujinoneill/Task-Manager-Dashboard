@@ -2,9 +2,17 @@
     cursor: pointer;
 }
 
-
 .card-body {
     font-size: 14px;
+}
+
+.card-img-top {
+    transition: all .5s;
+}
+
+.img-scale {
+    transform: scale(1.5);
+    z-index: 9999;
 }
 
 .icon a {
@@ -33,13 +41,4 @@
 
 .share-people img {
     width: 60px;
-}
-
-.card-img-top {
-    transition: all .5s;
-}
-
-.img-scale {
-    transform: scale(1.5);
-    z-index: 9999;
 }
