@@ -21,9 +21,12 @@
     margin: auto;
 }
 
-.monthly-plan .btn {
-    background-color: #A3CEF1;
-    color: white;
+.monthly-plan .form-select {
+    color: #6096BA;
+    border: none;
+    width: 65%;
+    margin: auto;
+    text-align: center;
 }
 
 .weekly-header {

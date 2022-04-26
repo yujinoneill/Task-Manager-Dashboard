@@ -159,7 +159,7 @@
                                 <div class="goals-text d-flex navy">
                                     <div>Goals</div>
                                     <div style="flex-grow: 1"></div>
-                                    <div>50%</div>
+                                    <div class="goals-percent">50%</div>
                                 </div>
                                 <div class="progress mt-2">
                                     <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
@@ -172,19 +172,14 @@
                     <div class="col-sm-5 px-3 monthly-border">
                         <div class="monthly-plan">
                             <div class="text-center mb-3">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        April
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">March</a></li>
-                                        <li><a class="dropdown-item" href="#">Febraury</a></li>
-                                        <li><a class="dropdown-item" href="#">January</a></li>
-                                    </ul>
-                                </div>
+                                <select class="form-select">
+                                    <option value="may">May</option>
+                                    <option value="april">April</option>
+                                    <option value="march">March</option>
+                                    <option value="february">Febraury</option>
+                                    <option value="january">January</option>
+                                </select>
                             </div>
-
                             <div class="graph">
                                 <canvas id="myChart"></canvas>
                             </div>
