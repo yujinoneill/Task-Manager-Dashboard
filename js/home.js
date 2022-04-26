@@ -1,3 +1,20 @@
+//Annual Plan & Progress Bar
+const checks = document.querySelectorAll('.form-check-input');
+
+for (let check of checks) {
+    check.addEventListener('change', function () {
+        if (this.checked == true) {
+            alert('You did a good job!');
+        }
+        const checkedAnnualPlans = document.querySelectorAll('.annual-plan .form-check-input:checked');
+        const progressBar = document.querySelector('.progress-bar');
+        const goalsPercent = document.querySelector('.goals-percent');
+        progressBar.style.width = checkedAnnualPlans.length / 4 * 100 + '%';
+        goalsPercent.innerText = checkedAnnualPlans.length / 4 * 100 + '%';
+    });
+};
+
+//Monthly Chart
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'doughnut',
@@ -15,34 +32,32 @@ const myChart = new Chart(ctx, {
     }
 });
 
-const check1 = document.querySelector("#check1");
-const check2 = document.querySelector("#check2");
-const check3 = document.querySelector("#check3");
-const check4 = document.querySelector("#check4");
+//When changing month, change the chart
+const formSelect = document.querySelector('.form-select');
 
-check1.addEventListener("change", function () {
-    if (check1.checked == true) {
-        alert("You did a good job!");
-    }
-})
-
-check2.addEventListener("change", function () {
-    if (check2.checked == true) {
-        alert("You did a good job!");
-    }
-})
-
-check3.addEventListener("change", function () {
-    if (check3.checked == true) {
-        alert("You did a good job!");
-    }
-})
-
-check4.addEventListener("change", function () {
-    if (check4.checked == true) {
-        alert("You did a good job!");
-    }
-})
+formSelect.addEventListener('change', function () {
+    if (formSelect.value === 'may') {
+        myChart.data.datasets[0].data[0] = 20;
+        myChart.data.datasets[0].data[1] = 80;
+        myChart.update();
+    } else if (formSelect.value === 'april') {
+        myChart.data.datasets[0].data[0] = 60;
+        myChart.data.datasets[0].data[1] = 40;
+        myChart.update();
+    } else if (formSelect.value === 'march') {
+        myChart.data.datasets[0].data[0] = 50;
+        myChart.data.datasets[0].data[1] = 50;
+        myChart.update();
+    } else if (formSelect.value === 'february') {
+        myChart.data.datasets[0].data[0] = 70;
+        myChart.data.datasets[0].data[1] = 30;
+        myChart.update();
+    } else if (formSelect.value === 'january') {
+        myChart.data.datasets[0].data[0] = 40;
+        myChart.data.datasets[0].data[1] = 60;
+        myChart.update();
+    };
+});
 
 
 
